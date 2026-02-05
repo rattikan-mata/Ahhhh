@@ -20,6 +20,6 @@ public class Shooter : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, shooter.position, transform.rotation);
 
         Rigidbody rigidbody = bullet.GetComponent<Rigidbody>();
-        rigidbody.AddForce(shooter.right * shooterForce, ForceMode.Impulse);
+        rigidbody.AddForce(shooter.forward * shooterForce, ForceMode.Impulse);
     }
 }
