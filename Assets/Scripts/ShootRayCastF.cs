@@ -42,6 +42,15 @@ public class ShootRayCastF : MonoBehaviour
                         enemy.TakeDamage();
                     }
                 }
+
+                if (hit.collider.name == "Obstacle")
+                {
+                    Obstacle obstacle = hit.collider.GetComponent<Obstacle>();
+                    if (obstacle != null)
+                    {
+                        obstacle.DamageTorque();
+                    }
+                }
             }
         }
     }
